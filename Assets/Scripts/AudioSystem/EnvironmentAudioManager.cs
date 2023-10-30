@@ -8,37 +8,25 @@ public enum EnvironmentAudioType
 }
 
 [RequireComponent(typeof(AudioSource))]
-public class EnvironmentAudioManager : MonoBehaviour
+public class EnvironmentAudioManager : AudioABS
 {
-    private AudioSource audioSource;
-    [SerializeField] private AudioClip[] environmentAudios;
 
-    private void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    public void ChooseSoundType(EnvironmentAudioType audioType)
+    public void PlaySoundByType(EnvironmentAudioType audioType)
     {
         switch (audioType)
         {
             case EnvironmentAudioType.Menu:
-                PlaySound(environmentAudios[0]);
+                PlaySound(audioClips[0]);
                 break;
             case EnvironmentAudioType.Gameplay:
-                PlaySound(environmentAudios[1]);
+                PlaySound(audioClips[1]);
                 break;
             case EnvironmentAudioType.GameOver:
-                PlaySound(environmentAudios[2]);
+                PlaySound(audioClips[2]);
                 break;
             default:
                 break;
         }
     }
 
-    private void PlaySound(AudioClip audio)
-    {
-        audioSource.clip = audio;
-        audioSource.Play();
-    }
 }

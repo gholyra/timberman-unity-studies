@@ -260,7 +260,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a005993500563479fdeffb3b40b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentAudios:
+  audioClips:
   - {fileID: 8300000, guid: 0bea9fdb8365acb489528b8ac25abd15, type: 3}
   - {fileID: 8300000, guid: 15c580b342fe9d14f9ac19ddd758db62, type: 3}
   - {fileID: 8300000, guid: 797d883794644304391d48cea70e7864, type: 3}
@@ -474,8 +474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8399963ac7efb7a4db34f9306419ec03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentAudio: {fileID: 0}
-  sfxAudio: {fileID: 0}
+  environmentAudio: {fileID: 322158229}
+  sfxAudio: {fileID: 2117181420}
 --- !u!1 &1511803986
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1511803987}
+  - component: {fileID: 1511803988}
   m_Layer: 0
   m_Name: ----GameSystem----
   m_TagString: Untagged
@@ -508,6 +509,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1511803988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511803986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786c6aa1fd82ca344b8cb1626c1ab1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSystem: {fileID: 733649582}
 --- !u!1 &1566683893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54871f61c68e8c84d9c7eb43d724c8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxAudios:
+  audioClips:
   - {fileID: 8300000, guid: 132669ff5d399a845a949fa3ad351b9e, type: 3}
   - {fileID: 8300000, guid: 08fb1199d2e87f748b6e04f20f29b273, type: 3}
   - {fileID: 8300000, guid: b8480e6cd85d24f4eaf537b4e70445d3, type: 3}
