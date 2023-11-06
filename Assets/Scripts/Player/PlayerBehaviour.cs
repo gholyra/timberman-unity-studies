@@ -21,6 +21,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void TimberHit()
     {
         playerAnimator.SetTrigger("pHit");
+        GameSystem.Instance.PlaySFXAudioByType(SFXAudioType.TimberHit);
     }
 
     private void OnDestroy()

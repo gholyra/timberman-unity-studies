@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 
 public class InputManager
 {
-
-    public Action OnHit;
+    public event Action OnHit;
 
     private GameControls gameControls;
 
