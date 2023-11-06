@@ -7,6 +7,7 @@ public class GameSystem : MonoBehaviour
 
     public static GameSystem Instance;
 
+    [HideInInspector] public InputManager inputManager;
     [SerializeField] private AudioSystem audioSystem;
 
     private void Awake()
@@ -19,6 +20,8 @@ public class GameSystem : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        inputManager = new InputManager();
         DontDestroyOnLoad(this.gameObject);
     }
 

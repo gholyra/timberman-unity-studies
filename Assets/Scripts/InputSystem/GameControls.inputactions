@@ -4,8 +4,41 @@
         {
             "name": "Player",
             "id": "6ac6c60d-ea46-4215-beca-c3de54368abb",
-            "actions": [],
-            "bindings": []
+            "actions": [
+                {
+                    "name": "Hit",
+                    "type": "Button",
+                    "id": "3b14d3a7-2fa8-4434-a759-fdfb3d39fad1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1665b5a9-f871-4aab-986d-31df026c8252",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c88d265-9961-4c30-ad78-8272e974d316",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
