@@ -45,7 +45,7 @@ public class TrunkPool : MonoBehaviour
         return trunkObject.GetComponent<TrunkBase>();
     }
 
-    private void TrunkHit()
+    public void TrunkHit()
     {
         TrunkBase hitTrunk = activeTrunks[activeTrunks.Count - 1];
         

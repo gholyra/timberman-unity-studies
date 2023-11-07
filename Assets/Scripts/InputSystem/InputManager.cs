@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public class InputManager
 {
-    public event Action OnHit;
+    public event Action<Vector2> OnHit;
 
     private GameControls gameControls;
 
@@ -17,6 +18,21 @@ public class InputManager
 
     private void Hit_performed(InputAction.CallbackContext obj)
     {
-        OnHit?.Invoke();
+        TouchSimulation.Enable();
+        Vector2 touchPosition = Touchscreen.current.position.ReadValue();
+
+        Vector2 touchWorldPosition = Camera.main.ScreenToWorldPoint(touchPosition);
+
+        OnHit?.Invoke(touchPosition);
+    }
+
+    private void DisableInput()
+    {
+        gameControls.Disable();
+    }
+
+    private void EnableInput()
+    {
+        gameControls.Enable();
     }
 }

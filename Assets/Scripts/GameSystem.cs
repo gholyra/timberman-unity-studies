@@ -8,7 +8,9 @@ public class GameSystem : MonoBehaviour
     public static GameSystem Instance;
 
     [HideInInspector] public InputManager inputManager;
+
     [SerializeField] private AudioSystem audioSystem;
+    [SerializeField] private TrunkPool trunkPool;
 
     private void Awake()
     {
@@ -38,5 +40,15 @@ public class GameSystem : MonoBehaviour
     public void PlaySFXAudioByType(SFXAudioType audioType)
     {
         audioSystem.PlaySFXAudioByType(audioType);
+    }
+
+    public void OnTrunkHit()
+    {
+        trunkPool.TrunkHit();
+    }
+
+    public void GameOver()
+    {
+
     }
 }
